@@ -1,0 +1,682 @@
+@import lib/base
+@import normalize
+@import mixins
+
+
+header
+	position: absolute
+	z-index: 999
+	top: 0
+	left: 0
+	right: 0
+	padding-top: 70px
+	padding-bottom: 70px
+	font-family: "League Gothic"
+
+.content
+	position: relative
+
+body
+	color: #ffffff
+	font-family: "Open Sans"
+	font-size: 16px
+	font-weight: 300
+	line-height: 24px
+	background-position: center
+	background-color: #61446d
+
+h2
+	font-family: "League Gothic"
+	font-size: 60px
+	line-height: 70px
+	font-weight: 400
+
+h3
+	font-family: "League Gothic"
+	font-size: 32px
+	font-weight: 400
+	line-height: 36px
+
+p
+	font-size: 16px
+	font-weight: 300
+	line-height: 20px
+
+.wrapper
+	min-width: 320px
+	max-width: 1040px
+	margin: 0 auto
+	position: relative
+	padding: 0 40px
+
+.for-user
+	width: 50px
+	height: 50px
+	border-radius: 50%
+
+.menu-toggle
+	display: none
+
+/*  Buttons
+     ====================== */
+
+a
+	color: #ffffff
+	font-family: "League Gothic"
+	font-size: 18px
+	font-weight: 400
+	line-height: 24px
+	text-transform: uppercase
+
+/*  Icons
+     ====================== */
+/*  Fonts
+     ====================== */
+
+	
++font("League Gothic", "LeagueGothic")
+	font-style: normal
+	font-weight: 400
+
+.ic
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	background: $icons no-repeat
+
+@each $i in key, idea, music, prev-arrow, next-arrow, logos-1, logos-2, logos-3, logos-4, logos-5, logos-6
+	.ic--#{$i}
+		+s(ic--#{$i})
+
+
+/* HEADER
+/* ================================================ */
+.header
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.logo a
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3)
+	color: #ffffff
+	font-family: "League Gothic"
+	font-size: 48px
+	line-height: 50px
+	text-transform: uppercase
+
+.colortext
+	color: #523a5d
+
+.menu
+	display: flex
+	list-style: none
+	a
+		text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4)
+		font-size: 24px
+		line-height: 30px
+		&:hover
+			color: #523a5d
+			border-bottom: 2px solid #edbfff
+
+.menu__item + .menu__item
+	margin-left: 40px
+
+.baner	
+	padding-top: 260px
+	padding-bottom: 170px
+	background-image: url(../img/bg.png)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+.home-slider
+	position: relative
+	.slick-dots
+		position: absolute
+		right: 165px
+		bottom: -95px
+
+.home__wrap
+	display: flex
+	align-items: center
+
+.home__wrap__descr
+	margin-right: 100px
+	z-index: 2
+	h3
+		color: #edbfff
+	
+.home__wrap__img
+	padding-right: 70px
+	z-index: 2
+	flex: none
+
+.slider-wrapper
+	position: relative
+
+.slick-arrow
+	position: absolute
+	background-color: transparent
+	border-color: transparent
+	transform: translate(0,-50%)
+	top: 50%
+
+.slick-prev
+	left: -80px
+
+.slick-next
+	right: -80px
+	
+/* CONTENT
+/* ================================================ */
+
+
+
+.slider-bg
+	position: relative
+	background-color: rgba(0, 0, 0, 0.2)
+
+.blurbs-bg
+	background-image: linear-gradient(to top, #322539 0%, #745083 100%)
+	padding: 80px 0
+
+.blurbs
+	display: flex
+	p
+		margin-top: 10px
+		margin-bottom: 20px
+	a
+		float: right
+		&:hover
+			text-shadow: 0 0 8px rgba(255, 255, 255, 0.8)
+	.blurbs__item
+		width: 33.33%
+		// padding: 0 50px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		i
+			flex: none
+		.blurbs__item__descr
+			padding-left: 25px
+	.blurbs__item + .blurbs__item
+		margin-left: 50px
+
+
+.news-bg
+	background-color: #f9f9f9
+	padding-top: 90px
+	padding-bottom: 75px
+	display: flex
+	justify-content: space-between
+	h3
+		color: #454545
+		text-transform: uppercase
+
+.news-bg__wrapper
+	display: flex
+	justify-content: space-between
+
+.testimonial
+	position: relative
+	background: #fff
+	padding: 30px 35px
+	p
+		color: #454545
+	.for-user
+		position: absolute
+		left: -25px
+		top: 20px
+		overflow: hidden
+		img
+			display: block
+			width: 100%
+			height: 100%
+		
+.testimonial-colortext
+	color: #edbfff
+
+.testimonial-slider
+	width: 450px
+	margin-right: 60px
+	position: relative
+	.slick-slide
+		padding-left: 25px
+	.slick-dots
+		margin-top: 15px
+	.slick-dots button
+		background: #fff
+	.slick-dots	.slick-active button
+		background: #454545
+
+
+.updates
+	padding-top: 30px
+	color: #454545
+	a
+		float: right
+		padding-top: 15px
+		color: #000
+		&:hover
+			text-shadow: 0 0 8px rgba(18, 14, 14, 0.8)
+
+.updates__item
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	padding-top: 10px
+	.for-user
+		margin-right: 15px
+		flex: none
+	.updates__item-text
+		flex: 1
+
+.company-bg
+	padding: 25px 0
+	border-top: 1px solid #e6e6e6
+	border-bottom: 1px solid #e6e6e6
+	text-align: center
+	background-color: #f9f9f9
+
+.info-bg
+	background-color: #e6e6e6
+	padding: 100px 0
+
+.info
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	margin: 0 -30px
+	h3
+		color: #454545
+		padding-bottom: 15px
+	p
+		color: #787878
+	.info__item
+		width: 33.33%
+		padding: 0 30px
+	.info__item-title
+		font-size: 60px
+		line-height: 65px
+		padding-bottom: 5px
+	.info__item-copyright
+		color: #c5c5c5
+		font-family: "Georgia"
+		font-size: 16px
+		font-style: italic
+		line-height: 24px
+		white-space: nowrap
+
+.info__item-colortext
+	color: #b9b9b9
+
+.company-menu
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	padding: 0 90px
+	.company__item
+		a
+			display: block
+
+
+/* FOOTER
+/* ================================================ */
+footer
+	padding: 50px 0
+	z-index: 1
+	width: 100%
+	min-width: 320px
+	background-image: url(../img/footer-bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	
+.footer-wrapper
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	.logo
+		margin-right: 0
+
+.footer-menu
+	list-style: none
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	.footer-menu__link:hover
+		text-shadow: 0 0 8px rgba(255, 255, 255, 0.8)
+
+
+.footer-menu__item + .footer-menu__item
+	margin-left: 40px
+
+.footer-copyright
+	margin-left: auto
+	text-align: right
+	font-size: 12px
+	span
+		font-weight: 800
+
+/* MEDIA
+/* ================================================ */
+@media screen and (min-width: 768px) and (max-width: 1023px)
+	.blurbs__item__descr
+		.hiddenipad
+			display: none
+	
+	.news-bg
+		.testimonial-slider
+			.hiddenipad
+				display: none
+
+@media screen and (max-width: 1199px)
+	.home__wrap__img
+		padding-right: 0
+
+	.slick-prev
+		left: -40px
+
+	.slick-next
+		right: -40px
+
+@media screen and (max-width: 1023px)
+	.hiddenipad
+		display: none
+
+	.slick-prev
+		left: -30px
+
+	.slick-next
+		right: -30px
+
+	h2
+		font-size: 48px
+		line-height: 55px
+
+	h3
+		font-size: 24px
+		line-height: 30px
+
+	.header
+		display: block
+		.navbar
+			padding-top: 40px
+			.menu
+				a
+					&:hover
+						color: #fff
+						border-bottom: 1px solid transparent
+	.baner
+		.slider-bg
+			.slider-wrapper
+				padding: 0 30px
+				.home-slider
+					padding: 0 20px
+				// .slick-prev
+				// 	left: -15px
+				// .slick-next
+				// 	right: -50px
+
+	.home__wrap
+		.home__wrap__descr
+			padding: 100px 0
+			h3
+				.hiddenipad
+					display: none
+		.home__wrap__img
+			padding-right: 0
+
+	.blurbs-bg
+		padding: 50px 0
+		.blurbs
+			.blurbs__item
+				.blurbs__item__descr
+					padding-right: 40px
+					h3
+						white-space: nowrap
+			.blurbs__item + .blurbs__item
+				margin-left: 10px
+			a
+				&:hover
+					text-shadow: none
+
+
+	.news-bg
+		padding: 50px 0
+		.testimonial-slider
+			width: 330px
+			margin-right: 30px
+		.updates
+			a
+				&:hover
+					text-shadow: none
+			.hiddenipad
+				display: none
+
+	.company-menu
+		padding: 0
+	
+	.info-bg
+		padding: 50px 0
+		.info
+			.info__item
+				.info__item-title
+					font-size: 24px
+					line-height: 30px
+					.info__item-colortext
+						color: #454545
+				.info__item-copyright
+					display: none
+			h3
+				padding-bottom: 5px
+	
+	footer
+		padding: 25px 0
+		.footer-menu
+			.footer-menu__link
+				&:hover
+					text-shadow: none
+
+@media screen and (max-width: 767px)
+	header
+		padding-top: 40px
+		padding-bottom: 0px
+
+	h2
+		font-size: 36px
+		line-height: 40px
+
+	h3
+		font-size: 18px
+		line-height: 23px
+
+	.wrapper
+		padding: 0 20px
+
+	.header
+		.logo
+			text-align: center
+		.navbar
+			padding-top: 20px
+			text-align: center
+			.menu
+				display: none
+				.menu__item + .menu__item
+					margin-left: 0
+
+	.navigation
+		.menu-toggle
+			display: inline-block
+			width: 250px
+			padding: 10px 0
+			opacity: 0.8
+			border-radius: 5px
+			box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2)
+			border: 1px solid #051116
+			background-color: #36293e
+			color: #fff
+			border-bottom: 1px solid #35273d
+			&:hover
+				opacity: 0.98
+				text-shadow: 0 0 10px rgba(255, 255, 255, 0.6)
+			a
+				font-size: 24px
+				line-height: 30px
+			&:after
+				content: ""
+				display: block
+				width: 47px
+				height: 2px
+				background-color: #edbfff
+				margin: 0 auto
+		.menu		
+			.menu__item
+				padding: 0 10px
+				.menu__link
+					display: inline-block
+					width: 250px
+					padding: 10px 10px
+					opacity: 0.8
+					border-radius: 5px
+					box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2)
+					border: 1px solid #051116
+					background-color: #36293e
+					color: #fff
+					border-bottom: 1px solid #35273d
+					&:hover
+						opacity: 0.98
+						text-shadow: 0 0 10px rgba(255, 255, 255, 0.6)
+				&:first-child
+					display: none
+
+	.home-slider	
+		.home__wrap
+			.home__wrap__descr
+				padding: 20px 0
+				margin-right: 10px
+				flex: 1
+				p
+					display: none
+			.home__wrap__img
+				width: 45%
+				img
+					width: 100%
+		.slick-dots
+			right: 0
+			bottom: -55px
+			width: 100%
+
+	.baner
+		padding-top: 210px
+		padding-bottom: 130px
+		.slider-bg
+			.slider-wrapper
+				.home-slider
+					padding: 0 10px
+
+	.blurbs-bg
+		.blurbs
+			flex-wrap: wrap
+			.blurbs__item
+				width: auto
+				p
+					margin-bottom: 10px
+			.blurbs__item + .blurbs__item
+				margin-left: 0
+				padding-top: 30px
+
+	.news-bg__wrapper
+		flex-wrap: wrap
+		.testimonial-slider
+			width: 100%
+			margin-right: 0
+		.updates
+			margin: 0 auto
+
+	.company-menu
+		flex-wrap: wrap
+		.company__item
+			margin-bottom: 25px
+			width: 33.33%
+
+	.info
+		flex-wrap: wrap
+		margin: 0
+		h3
+			padding-bottom: 5px
+		.info__item
+			width: auto
+			padding: 0
+		.info__item + .info__item
+			margin-top: 30px
+	
+	.footer-wrapper
+		flex-wrap: wrap
+		.footer-menu
+			width: 100%
+			justify-content: space-between
+			.footer-menu__item
+				margin-left: 10px
+		.footer-copyright
+			margin: 0 auto
+			padding-top: 30px
+			text-align: center
+
+@media screen and (max-width: 479px)
+	.hiddeniphone
+		display: none
+	
+	.slick-prev
+		left: -20px
+
+	.slick-next
+		right: -20px
+
+	.baner
+		.slider-bg
+			background-color: transparent
+			.slider-wrapper
+				padding: 0 20px
+				.home-slider
+					text-align: center
+					padding: 0 15px	
+					.home__wrap
+						.home__wrap__descr
+							margin-right: 0
+						.home__wrap__img
+							display: none
+		
+	.testimonial-colortext
+		display: block
+
+	.updates__item
+		.for-user
+			margin-right: 10px
+
+	.company-menu
+		.company__item
+			width: 50%
+
+	.info-bg
+		display: none
+
+
+	.footer-wrapper
+		.footer-menu
+			display: none
+		.footer-copyright
+			padding-top: 0
